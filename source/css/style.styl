@@ -1,0 +1,93 @@
+@import "nib"
+@import "_util/mixin"
+
+global-reset()
+
+input, button
+  margin: 0
+  &::-moz-focus-inner
+    border: 0
+    padding: 0
+
+// Colors
+color-default = #555
+color-grey = #999
+color-border = #ddd
+color-link = #258fb8
+color-background = #eee
+color-quote-background = rgb(250, 247, 227)
+color-quote-separator = rgba(170, 170, 170, 0.3)
+color-quote-line = hsla(349, 76%, 60%, 0.3)
+color-quote-text = #666
+color-footer-background = #262a30
+color-twitter = #00aced
+color-facebook = #3b5998
+color-pinterest = #cb2027
+color-google = #dd4b39
+
+// Fonts
+font-sans = "Helvetica Neue", Helvetica, Arial, sans-serif
+font-serif = Georgia, "Times New Roman", serif
+font-mono = "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace
+
+font-icon = FontAwesome
+font-icon-path = "fonts/fontawesome-webfont"
+font-icon-version = "4.0.3"
+
+@font-face
+  font-family: FontAwesome
+  font-style: normal
+  font-weight: normal
+  src: url(font-icon-path + ".eot?v=#" + font-icon-version)
+  src: url(font-icon-path + ".eot?#iefix&v=#" + font-icon-version) format("embedded-opentype"),
+       url(font-icon-path + ".woff?v=#" + font-icon-version) format("woff"),
+       url(font-icon-path + ".ttf?v=#" + font-icon-version) format("truetype"),
+       url(font-icon-path + ".svg#fontawesomeregular?v=#" + font-icon-version) format("svg")
+
+// Grids
+column-width = 65px
+gutter-width = 10px
+columns = 12
+
+@import "_util/grid"
+
+.outer
+  clearfix()
+  max-width: (column-width + gutter-width) * columns + gutter-width
+  margin: 0 auto
+  padding: 0 gutter-width
+
+.inner
+  column(columns)
+
+.left, .alignleft
+  float: left
+
+.right, .alignright
+  float: right
+
+.clear
+  clear: both
+
+// Variables
+font-size = 14px
+line-height = 1.6em
+line-height-title = 1.1em
+banner-height = 300px
+banner-url = "images/banner.jpg"
+block-margin = 50px
+article-padding = 20px
+mq-mobile = "screen and (max-width: 479px)"
+mq-tablet = "screen and (min-width: 480px) and (max-width: 767px)"
+mq-normal = "screen and (min-width: 768px)"
+
+body
+  background: color-background
+  font: font-size font-sans
+
+@import "_partial/header"
+@import "_partial/article"
+@import "_partial/comment"
+@import "_partial/archive"
+@import "_partial/footer"
+@import "_partial/highlight"

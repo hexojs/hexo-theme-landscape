@@ -1,0 +1,6 @@
+<% if (post.categories && post.categories.length){ %>
+  <%- categories(post.categories, {
+    show_count: false,
+    class: 'article-category'
+  }) %>
+<% } %>

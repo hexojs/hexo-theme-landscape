@@ -1,0 +1,18 @@
+<header id="header">
+  <div id="banner"></div>
+  <h1 id="logo-wrap">
+    <a href="<%= config.root %>" id="logo"><%= config.title %></a>
+  </h1>
+  <div id="header-shadow"></div>
+  <div class="outer">
+    <nav id="main-nav" class="inner">
+      <ul class="main-nav-list">
+        <% for (var i in theme.menu){ %>
+          <li class="main-nav-item">
+            <a class="main-nav-link" href="<%= theme.menu[i] %>"><%= i %></a>
+          </li>
+        <% } %>
+      </ul>
+    </nav>
+  </div>
+</header>

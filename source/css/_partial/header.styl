@@ -1,0 +1,56 @@
+logo-size = 50px
+
+#header
+  height: banner-height
+  position: relative
+  border-bottom: 1px solid color-border
+
+#banner
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background: url(banner-url) #000
+  background-size: cover
+
+#logo-wrap
+  absolute-center(logo-size)
+
+#logo
+  hide-text()
+  width: logo-size
+  height: logo-size
+  display: block
+  background-repeat: no-repeat
+  background-size: logo-size
+  background-image: url("images/logo.png")
+  background-image: url("images/logo.svg"), none
+  background-size: logo-size
+
+#main-nav
+  position: relative
+
+.main-nav-list
+  margin: 0 -15px
+
+.main-nav-item
+  padding: 20px 15px
+  float: left
+
+.main-nav-link
+  color: #fff
+  opacity: 0.8
+  text-decoration: none
+  text-shadow: 0 1px rgba(0, 0, 0, 0.2)
+  transition: opacity 0.2s
+  &:hover
+    opacity: 1
+
+#header-shadow
+  position: absolute
+  bottom: 0
+  left: 0
+  width: 100%
+  height: 10px
+  background: linear-gradient(bottom, rgba(0, 0, 0, 0.1), transparent)

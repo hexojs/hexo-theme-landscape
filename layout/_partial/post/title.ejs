@@ -1,0 +1,13 @@
+<% if (post.link){ %>
+  <% if (post.title){ %>
+    <h1><a class="<%= class_name %>" href="<%- post.link %>" target="_blank"><%= post.title %></a></h1>
+  <% } else { %>
+    <h1><a class="<%= class_name %>" href="<%- post.link %>" target="_blank"><%= post.link %></a></h1>
+  <% } %>
+<% } else { %>
+  <% if (index){ %>
+    <h1><a class="<%= class_name %>" href="<%- config.root %><%- post.path %>"><%= post.title %></a></h1>
+  <% } else { %>
+    <h1 class="<%= class_name %>"><%= post.title %></h1>
+  <% } %>
+<% } %>

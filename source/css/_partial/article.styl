@@ -1,0 +1,269 @@
+.article
+  margin: block-margin 0
+
+.article-inner
+  background: #fff
+  box-shadow: 1px 2px 3px #ddd
+  padding: article-padding
+  border: 1px solid color-border
+  border-radius: 3px
+
+.article-date
+  block-caption()
+
+.article-title
+  text-decoration: none
+  font-size: 2em
+  font-weight: bold
+  color: color-default
+  line-height: line-height-title
+  transition: color 0.2s
+  &:hover
+    color: color-link
+
+.article-entry
+  color: color-default
+  p, ol, ul, dl, table, iframe
+    line-height: line-height
+    margin: line-height 0
+  h1, h2, h3, h4, h5, h6, strong
+    font-weight: bold
+  em
+    font-style: italic
+  h1, h2, h3, h4, h5, h6
+    line-height: line-height-title
+    margin: line-height-title 0
+  h1
+    font-size: 2em
+  h2
+    font-size: 1.5em
+  h3
+    font-size: 1.3em
+  a
+    color: color-link
+    text-decoration: none
+    &:hover
+      text-decoration: underline
+  small
+    font-size: 0.85em
+  ul, ol, dl
+    margin-left: 20px
+    ul, ol, dl
+      margin-top: 0
+      margin-bottom: 0
+  ul
+    list-style: disc
+  ol
+    list-style: decimal
+  dl
+    list-style: square
+  img, video
+    max-width: 100%
+    height: auto
+    display: block
+    margin: auto
+  iframe
+    border: none
+  blockquote
+    margin: line-height article-padding * -1
+    padding-left: article-padding * 2
+    padding-right: article-padding
+    border-top: 1px solid transparent
+    border-bottom: 1px solid #fff
+    font-family: font-serif
+    background-color: color-quote-background
+    background-image: linear-gradient(bottom, color-quote-separator, transparent 1px)
+    background-size: 100% line-height
+    position: relative
+    color: color-quote-text
+    &:before
+      content: ""
+      position: absolute
+      top: 0
+      bottom: 1px // Because the border-bottom of blockquote is transparent
+      left: article-padding
+      width: 2px
+      border-left: 1px solid color-quote-line
+      border-right: 1px solid color-quote-line
+  .caption
+    color: color-grey
+    display: block
+    font-size: 0.9em
+    margin-top: 0.5em
+    position: relative
+    text-align: center
+  // http://webdesignerwall.com/tutorials/css-elastic-videos
+  .video-container
+    position: relative
+    padding-top: (9 / 16 * 100)% // 16:9 ratio
+    height: 0
+    overflow: hidden
+    iframe, object, embed
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      margin-top: 0
+
+.article-more-link a
+  display: inline-block
+  line-height: 1em
+  padding: 6px 15px
+  border-radius: 15px
+  background: color-background
+  color: color-grey
+  text-shadow: 0 1px #fff
+  text-decoration: none
+  &:hover
+    background: color-link
+    color: #fff
+    text-decoration: none
+    text-shadow: 0 1px darken(color-link, 20%)
+
+.article-footer
+  clearfix()
+  font-size: 0.85em
+  line-height: line-height
+  border-top: 1px solid color-border
+  padding-top: line-height
+  a
+    color: color-grey
+    text-decoration: none
+    &:hover
+      color: color-default
+
+.article-tag-list-item
+  float: left
+  margin-right: 10px
+
+.article-tag-list-link
+  &:before
+    content: "#"
+
+.article-comment-link
+  float: right
+  &:before
+    content: "\f075"
+    font-family: font-icon
+    padding-right: 8px
+
+.article-share-link
+  cursor: pointer
+  float: right
+  margin-left: 20px
+  &:before
+    content: "\f064"
+    font-family: font-icon
+    padding-right: 6px
+
+#article-nav
+  clearfix()
+  margin: block-margin 0
+  position: relative
+  &:before
+    absolute-center(8px)
+    content: ""
+    border-radius: 50%
+    background: color-border
+    box-shadow: 0 1px 2px #fff
+
+.article-nav-link-wrap
+  width: 50%
+  text-decoration: none
+  text-shadow: 0 1px #fff
+  color: color-grey
+  box-sizing: border-box
+  &:hover
+    color: color-default
+
+#article-nav-newer
+  float: left
+  text-align: right
+  padding-right: 20px
+
+#article-nav-older
+  float: right
+  padding-left: 20px
+
+.article-nav-caption
+  text-transform: uppercase
+  letter-spacing: 2px
+  color: color-border
+  line-height: 1em
+  font-weight: bold
+  #article-nav-newer &
+    margin-right: -2px
+
+.article-nav-title
+  font-size: 0.85em
+  line-height: line-height
+  margin-top: 0.5em
+
+.article-share-box
+  position: absolute
+  display: none
+  background: #fff
+  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.2)
+  border-radius: 3px
+  margin-left: -145px
+  overflow: hidden
+  &.on
+    display: block
+
+.article-share-box-input
+  width: 100%
+  background: none
+  box-sizing: border-box
+  font: 14px font-sans
+  padding: 0 15px
+  color: color-default
+  outline: none
+  border: 1px solid color-border
+  border-radius: 3px 3px 0 0
+  height: 36px
+  line-height: 36px
+
+.article-share-box-links
+  clearfix()
+  background: color-background
+
+.article-share-box-link
+  width: 50px
+  height: 36px
+  display: block
+  float: left
+  position: relative
+  color: #999
+  text-shadow: 0 1px #fff
+  &:before
+    font-size: 20px
+    font-family: font-icon
+    absolute-center(@font-size)
+    text-align: center
+  &:hover
+    color: #fff
+  &.twitter
+    &:before
+      content: "\f099"
+    &:hover
+      background: color-twitter
+      text-shadow: 0 1px darken(color-twitter, 20%)
+  &.facebook
+    &:before
+      content: "\f09a"
+    &:hover
+      background: color-facebook
+      text-shadow: 0 1px darken(color-facebook, 20%)
+  &.pinterest
+    &:before
+      content: "\f0d2"
+    &:hover
+      background: color-pinterest
+      text-shadow: 0 1px darken(color-pinterest, 20%)
+  &.google
+    &:before
+      content: "\f0d5"
+    &:hover
+      background: color-google
+      text-shadow: 0 1px darken(color-google, 20%)
