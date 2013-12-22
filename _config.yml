@@ -1,8 +1,8 @@
 menu:
   Home: /
-  Archives: /Archives
+  Archives: /archives
 
 excerpt_link: Read More
 fancybox: true
 google_analytics:
-rss:
+rss: /atom.xml

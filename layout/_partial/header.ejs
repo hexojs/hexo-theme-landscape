@@ -3,16 +3,22 @@
   <h1 id="logo-wrap">
     <a href="<%= config.root %>" id="logo"><%= config.title %></a>
   </h1>
-  <div id="header-shadow"></div>
   <div class="outer">
-    <nav id="main-nav" class="inner">
-      <ul class="main-nav-list">
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
         <% for (var i in theme.menu){ %>
-          <li class="main-nav-item">
-            <a class="main-nav-link" href="<%= theme.menu[i] %>"><%= i %></a>
-          </li>
+          <a class="main-nav-link" href="<%= theme.menu[i] %>"><%= i %></a>
         <% } %>
-      </ul>
-    </nav>
+      </nav>
+      <nav id="sub-nav">
+        <% if (theme.rss){ %>
+          <a id="nav-rss-link" class="sub-nav-link" href="<%- theme.rss %>" title="RSS Feed"></a>
+        <% } %>
+        <a id="nav-search-btn" class="sub-nav-link" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <%- search_form({button: '&#xF002;'}) %>
+      </div>
+    </div>
   </div>
 </header>
