@@ -1,10 +1,10 @@
-<article class="article article-type-<%= post.layout %>">
+<article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %>" itemscope itemprop="blogPost">
   <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
   <div class="article-inner">
     <header class="article-header">
       <%- partial('post/title', {class_name: 'article-title'}) %>
     </header>
-    <div class="article-entry">
+    <div class="article-entry" itemprop="articleBody">
       <% if (post.excerpt && index){ %>
         <%- post.excerpt %>
         <p class="article-more-link">
