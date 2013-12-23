@@ -15,6 +15,10 @@
     bottom: 0
     background: linear-gradient(transparent, rgba(0, 0, 0, 0.2))
 
+#header-outer
+  height: 100%
+  position: relative
+
 #header-inner
   position: relative
   overflow: hidden
@@ -29,29 +33,40 @@
   background-size: cover
   z-index: -1
 
-#logo-wrap
-  width: 100%
-  height: logo-size
+#header-title
   text-align: center
+  height: logo-size
   position: absolute
   top: 50%
+  left: 0
   margin-top: logo-size * -0.5
 
-#logo
+$logo-text
   text-decoration: none
   color: #fff
-  font-size: logo-size
   font-weight: 300
-  line-height: logo-size
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3)
+
+#logo
+  @extend $logo-text
+  font-size: logo-size
+  line-height: logo-size
   letter-spacing: 2px
+
+#subtitle
+  @extend $logo-text
+  font-size: subtitle-size
+  line-height: subtitle-size
+  letter-spacing: 1px
+
+#subtitle-wrap
+  margin-top: subtitle-size
 
 #main-nav
   float: left
   margin-left: -15px
 
-.main-nav-link
-.sub-nav-link
+$nav-link
   float: left
   color: #fff
   opacity: 0.6
@@ -63,12 +78,19 @@
   &:hover
     opacity: 1
 
+.main-nav-link
+  @extend $nav-link
+  font-weight: 300
+  letter-spacing: 1px
+
 #sub-nav
   float: right
   margin-right: -15px
 
-#nav-rss-link
-#nav-search-btn
+.sub-nav-link
+  @extend $nav-link
+
+$sub-nav-btn
   font-family: font-icon
   text-align: center
   font-size: font-size
@@ -76,6 +98,7 @@
   height: font-size
   padding: 20px 15px
   position: relative
+  cursor: pointer
   &:after
     content: attr(data-tooltip)
     position: absolute
@@ -84,11 +107,12 @@
     background: #000
 
 #nav-rss-link
+  @extend $sub-nav-btn
   &:before
     content: "\f09e"
 
 #nav-search-btn
-  cursor: pointer
+  @extend $sub-nav-btn
   &:before
     content: "\f002"
 
