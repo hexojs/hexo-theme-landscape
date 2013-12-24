@@ -1,9 +1,14 @@
 <%- partial('_partial/head') %>
 <body>
-  <%- partial('_partial/header') %>
-  <div class="outer">
-    <div class="inner"><%- body %></div>
+  <div id="wrap">
+    <%- partial('_partial/header') %>
+    <div class="outer">
+      <section id="main"><%- body %></section>
+      <% if (theme.sidebar && theme.sidebar !== 'bottom'){ %>
+        <%- partial('_partial/sidebar') %>
+      <% } %>
+    </div>
+    <%- partial('_partial/footer') %>
   </div>
-  <%- partial('_partial/footer') %>
 </body>
 </html>

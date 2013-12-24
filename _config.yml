@@ -6,3 +6,10 @@ excerpt_link: Read More
 fancybox: true
 google_analytics:
 rss: /atom.xml
+
+sidebar: right
+widgets:
+- category
+- tag
+- tagcloud
+- recent_posts

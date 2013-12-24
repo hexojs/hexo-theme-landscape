@@ -5,7 +5,7 @@
   clearfix()
 
 .archive-year
-  block-caption()
+  @extend $block-caption
 
 .archives
   column-gap: 10px
@@ -18,10 +18,7 @@
   avoid-column-break()
 
 .archive-article-inner
-  background: #fff
-  box-shadow: 1px 2px 3px #ddd
-  border: 1px solid color-border
-  border-radius: 3px
+  @extend $block
   padding: 10px
   margin-bottom: 15px
 

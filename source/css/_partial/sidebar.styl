@@ -1,0 +1,18 @@
+if sidebar is bottom
+  @import "sidebar-bottom"
+else
+  @import "sidebar-aside"
+
+.category-list-count
+.tag-list-count
+  padding-left: 5px
+  color: color-grey
+  font-size: 0.85em
+  &:before
+    content: "("
+  &:after
+    content: ")"
+
+.tagcloud
+  a
+    margin-right: 5px

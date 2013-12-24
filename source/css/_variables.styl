@@ -8,6 +8,9 @@ color-quote-background = rgb(250, 247, 227)
 color-quote-separator = rgba(170, 170, 170, 0.3)
 color-quote-line = hsla(349, 76%, 60%, 0.3)
 color-quote-text = #666
+color-sidebar-text = #777
+color-widget-background = #ddd
+color-widget-border = #ccc
 color-footer-background = #262a30
 color-twitter = #00aced
 color-facebook = #3b5998
@@ -31,19 +34,20 @@ subtitle-size = 16px
 banner-height = 300px
 banner-url = "images/banner.jpg"
 
+sidebar = hexo-config("sidebar")
+
 // Layout
 block-margin = 50px
 article-padding = 20px
 main-column = 9
 sidebar-column = 3
 
-if !hexo-config("sidebar") or hexo-config("sidebar") is bottom
-  sidebar-column = 0
+_sidebar-column = sidebar is bottom ? 0 : sidebar-column
 
 // Grids
-column-width = 85px
-gutter-width = 15px
-columns = main-column + sidebar-column
+column-width = 80px
+gutter-width = 20px
+columns = main-column + _sidebar-column
 
 // Media queries
 mq-mobile = "screen and (max-width: 479px)"

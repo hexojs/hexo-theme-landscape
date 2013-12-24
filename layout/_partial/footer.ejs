@@ -1,7 +1,11 @@
 <footer id="footer">
+  <% if (theme.sidebar === 'bottom'){ %>
+    <%- partial('_partial/sidebar') %>
+  <% } %>
   <div class="outer">
-    <div class="inner">
-      <div id="footer-copyright">&copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %></div>
+    <div id="footer-info" class="inner">
+      &copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %><br>
+      Powered by <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
