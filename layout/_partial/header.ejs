@@ -13,15 +13,16 @@
     </div>
     <div id="header-inner" class="inner">
       <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
         <% for (var i in theme.menu){ %>
-          <a class="main-nav-link" href="<%= theme.menu[i] %>"><%= i %></a>
+          <a class="main-nav-link" href="<%- theme.menu[i] %>"><%= i %></a>
         <% } %>
       </nav>
       <nav id="sub-nav">
         <% if (theme.rss){ %>
-          <a id="nav-rss-link" class="sub-nav-link" href="<%- theme.rss %>" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="<%- theme.rss %>" title="RSS Feed"></a>
         <% } %>
-        <a id="nav-search-btn" class="sub-nav-link" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <%- search_form({button: '&#xF002;'}) %>

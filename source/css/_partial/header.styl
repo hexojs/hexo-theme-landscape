@@ -78,19 +78,8 @@ $nav-link
   &:hover
     opacity: 1
 
-.main-nav-link
+.nav-icon
   @extend $nav-link
-  font-weight: 300
-  letter-spacing: 1px
-
-#sub-nav
-  float: right
-  margin-right: -15px
-
-.sub-nav-link
-  @extend $nav-link
-
-$sub-nav-btn
   font-family: font-icon
   text-align: center
   font-size: font-size
@@ -99,20 +88,30 @@ $sub-nav-btn
   padding: 20px 15px
   position: relative
   cursor: pointer
-  &:after
-    content: attr(data-tooltip)
-    position: absolute
-    top: 100%
-    opacity: 0.8
-    background: #000
+
+.main-nav-link
+  @extend $nav-link
+  font-weight: 300
+  letter-spacing: 1px
+  @media mq-mobile
+    display: none
+
+#main-nav-toggle
+  display: none
+  &:before
+    content: "\f0c9"
+  @media mq-mobile
+    display: block
+
+#sub-nav
+  float: right
+  margin-right: -15px
 
 #nav-rss-link
-  @extend $sub-nav-btn
   &:before
     content: "\f09e"
 
 #nav-search-btn
-  @extend $sub-nav-btn
   &:before
     content: "\f002"
 
@@ -123,7 +122,7 @@ $sub-nav-btn
   height: 30px
   right: -150px
   opacity: 0
-  transition: 0.4s ease-out
+  transition: 0.2s ease-out
   &.on
     opacity: 1
     right: 0
