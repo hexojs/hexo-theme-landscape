@@ -46,9 +46,10 @@ body
   clear: both
 
 #main
-  column(main-column)
-  if sidebar && sidebar isnt bottom
-    float: sidebar is left ? right : left
+  @media mq-normal
+    column(main-column)
+    if sidebar && sidebar isnt bottom
+      float: sidebar is left ? right : left
 
 @import "_extend"
 @import "_partial/header"

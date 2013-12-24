@@ -1,15 +1,21 @@
+# Header
 menu:
   Home: /
   Archives: /archives
-
-excerpt_link: Read More
-fancybox: true
-google_analytics:
 rss: /atom.xml
 
+# Content
+excerpt_link: Read More
+fancybox: true
+
+# Sidebar
 sidebar: right
 widgets:
 - category
 - tag
 - tagcloud
 - recent_posts
+
+# Miscellaneous
+google_analytics:
+favicon:
