@@ -53,12 +53,12 @@
     } else {
       var html = [
         '<div id="' + id + '" class="article-share-box">',
-          '<input class="article-share-box-input" value="' + url + '">',
-          '<div class="article-share-box-links">',
-            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-box-link twitter" target="_blank" title="Twitter"></a>',
-            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-box-link facebook" target="_blank" title="Facebook"></a>',
-            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-box-link pinterest" target="_blank" title="Pinterest"></a>',
-            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-box-link google" target="_blank" title="Google+"></a>',
+          '<input class="article-share-input" value="' + url + '">',
+          '<div class="article-share-links">',
+            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
           '</div>',
         '</div>'
       ].join('');
@@ -86,10 +86,6 @@
   });
 
   // Caption
-  if ($.fancybox){
-    $('.fancybox').fancybox();
-  }
-
   $('.article-entry').each(function(i){
     $(this).find('img').each(function(){
       if (!$(this).parent().hasClass('fancybox')) return;
@@ -102,9 +98,13 @@
     });
 
     $(this).find('.fancybox').each(function(){
-      $(this).attr('rel', 'gallery' + i);
+      $(this).attr('rel', 'article' + i);
     });
   });
+
+  if ($.fancybox){
+    $('.fancybox').fancybox();
+  }
 
   // Mobile nav
   var $container = $('#container'),
@@ -134,4 +134,42 @@
 
     $container.removeClass('mobile-nav-on');
   });
+
+  // Gallery
+  /*
+  $('.article-gallery').each(function(){
+
+    var $this = $(this),
+      $wrap = $this.children('.article-gallery-photos'),
+      $photos = $this.find('.article-gallery-img'),
+      length = $photos.length;
+
+    if (length === 1) return;
+
+    var $prev = $('<a class="article-gallery-prev"></a>'),
+      $next = $('<a class="article-gallery-next"></a>'),
+      current = 0;
+
+    var _goto = function(i){
+      current %= length;
+    };
+
+    $wrap.css({
+      height: $photos.eq(0).height()
+    });
+
+    $photos.each(function(i){
+      $(this).data('id', i).addClass('loaded');
+    });
+
+    $prev.on('click', function(){
+      _goto(++current);
+    });
+
+    $next.on('click', function(){
+      _goto(--current);
+    });
+
+    $this.append($prev).append($next);
+  });*/
 })(jQuery);
