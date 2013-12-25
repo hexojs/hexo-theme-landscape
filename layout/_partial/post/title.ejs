@@ -1,13 +1,7 @@
 <% if (post.link){ %>
-  <% if (post.title){ %>
-    <h1 itemprop="name">
-      <a class="<%= class_name %>" href="<%- post.link %>" target="_blank"><%= post.title %></a>
-    </h1>
-  <% } else { %>
-    <h1 itemprop="name">
-      <a class="<%= class_name %>" href="<%- post.link %>" target="_blank"><%= post.link %></a>
-    </h1>
-  <% } %>
+  <h1 itemprop="name">
+    <a class="<%= class_name %>" href="<%- post.link %>" target="_blank" itemprop="url"><%= post.title %></a>
+  </h1>
 <% } else { %>
   <% if (index){ %>
     <h1 itemprop="name">
