@@ -5,8 +5,25 @@
   @extend $block
   overflow: hidden
 
+.article-meta
+  clearfix()
+
 .article-date
   @extend $block-caption
+  float: left
+
+.article-category
+  float: left
+  line-height: 1em
+  color: #ccc
+  text-shadow: 0 1px #fff
+  margin-left: 8px
+  &:before
+    content: "\2022"
+
+.article-category-link
+  @extend $block-caption
+  margin: 0 12px 1em
 
 .article-header
   padding: article-padding article-padding 0
@@ -24,7 +41,7 @@
 .article-entry
   @extend $base-style
   color: color-default
-  padding: 0 article-padding article-padding
+  padding: 0 article-padding
   p, table, iframe
     line-height: line-height
     margin: line-height 0

@@ -20,7 +20,9 @@
       <% } %>
       <% last = year; %>
       <section class="archives-wrap">
-        <a href="<%- config.root %>archives/<%= year %>" class="archive-year"><%= year %></a>
+        <div class="archive-year-wrap">
+          <a href="<%- config.root %>archives/<%= year %>" class="archive-year"><%= year %></a>
+        </div>
         <div class="archives">
     <% } %>
     <%- partial('archive-post', {post: post, even: i % 2 == 0}) %>
