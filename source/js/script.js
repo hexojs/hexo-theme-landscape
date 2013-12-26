@@ -88,7 +88,7 @@
   // Caption
   $('.article-entry').each(function(i){
     $(this).find('img').each(function(){
-      if (!$(this).parent().hasClass('fancybox')) return;
+      if ($(this).parent().hasClass('fancybox')) return;
 
       var alt = this.alt;
 
@@ -134,42 +134,4 @@
 
     $container.removeClass('mobile-nav-on');
   });
-
-  // Gallery
-  /*
-  $('.article-gallery').each(function(){
-
-    var $this = $(this),
-      $wrap = $this.children('.article-gallery-photos'),
-      $photos = $this.find('.article-gallery-img'),
-      length = $photos.length;
-
-    if (length === 1) return;
-
-    var $prev = $('<a class="article-gallery-prev"></a>'),
-      $next = $('<a class="article-gallery-next"></a>'),
-      current = 0;
-
-    var _goto = function(i){
-      current %= length;
-    };
-
-    $wrap.css({
-      height: $photos.eq(0).height()
-    });
-
-    $photos.each(function(i){
-      $(this).data('id', i).addClass('loaded');
-    });
-
-    $prev.on('click', function(){
-      _goto(++current);
-    });
-
-    $next.on('click', function(){
-      _goto(--current);
-    });
-
-    $this.append($prev).append($next);
-  });*/
 })(jQuery);
