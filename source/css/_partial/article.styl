@@ -40,9 +40,10 @@
 
 .article-entry
   @extend $base-style
+  clearfix()
   color: color-default
   padding: 0 article-padding
-  p, table, iframe
+  p, table
     line-height: line-height
     margin: line-height 0
   h1, h2, h3, h4, h5, h6
@@ -77,26 +78,18 @@
     border-bottom: 1px solid color-border
     padding: 10px 0
   blockquote
-    margin: line-height article-padding * -1
-    padding-left: article-padding * 2
-    padding-right: article-padding
-    border-top: 1px solid transparent
-    border-bottom: 1px solid #fff
     font-family: font-serif
-    background-color: color-quote-background
-    background-image: linear-gradient(bottom, color-quote-separator, transparent 1px)
-    background-size: 100% line-height
-    position: relative
-    color: color-quote-text
-    &:before
-      content: ""
-      position: absolute
-      top: 0
-      bottom: 1px // Because the border-bottom of blockquote is transparent
-      left: article-padding
-      width: 2px
-      border-left: 1px solid color-quote-line
-      border-right: 1px solid color-quote-line
+    font-size: 1.5em
+    margin: line-height 20px
+    text-align: center
+    footer
+      font-size: font-size
+      margin: line-height 0
+      font-family: font-sans
+      cite
+        &:before
+          content: "—"
+          padding: 0 0.5em
   .caption
     color: color-grey
     display: block
