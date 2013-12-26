@@ -3,6 +3,7 @@
 
 .article-inner
   @extend $block
+  overflow: hidden
 
 .article-date
   @extend $block-caption
@@ -21,42 +22,25 @@
     color: color-link
 
 .article-entry
+  @extend $base-style
   color: color-default
   padding: 0 article-padding article-padding
-  p, ol, ul, dl, table, iframe
+  p, table, iframe
     line-height: line-height
     margin: line-height 0
-  h1, h2, h3, h4, h5, h6, strong
+  h1, h2, h3, h4, h5, h6
     font-weight: bold
-  em
-    font-style: italic
   h1, h2, h3, h4, h5, h6
     line-height: line-height-title
     margin: line-height-title 0
-  h1
-    font-size: 2em
-  h2
-    font-size: 1.5em
-  h3
-    font-size: 1.3em
   a
     color: color-link
     text-decoration: none
     &:hover
       text-decoration: underline
-  small
-    font-size: 0.85em
   ul, ol, dl
-    margin-left: 20px
-    ul, ol, dl
-      margin-top: 0
-      margin-bottom: 0
-  ul
-    list-style: disc
-  ol
-    list-style: decimal
-  dl
-    list-style: square
+    margin-top: line-height
+    margin-bottom: line-height
   img, video
     max-width: 100%
     height: auto
@@ -64,6 +48,17 @@
     margin: auto
   iframe
     border: none
+  table
+    width: 100%
+    border-collapse: collapse
+    border-spacing: 0
+  th
+    font-weight: bold
+    border-bottom: 3px solid color-border
+    padding-bottom: 0.5em
+  td
+    border-bottom: 1px solid color-border
+    padding: 10px 0
   blockquote
     margin: line-height article-padding * -1
     padding-left: article-padding * 2
@@ -306,6 +301,7 @@ $article-share-link
   img
     display: block
     max-width: 100%
+    margin: 0 auto
 /*
 $article-gallery-ctrl
   position: absolute
