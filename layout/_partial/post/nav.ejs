@@ -1,3 +1,4 @@
+<% if (post.prev || post.next){ %>
 <nav id="article-nav">
   <% if (post.prev){ %>
     <a href="<%- config.root %><%- post.prev.path %>" id="article-nav-newer" class="article-nav-link-wrap">
@@ -18,3 +19,4 @@
     </a>
   <% } %>
 </nav>
+<% } %>
