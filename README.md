@@ -9,7 +9,7 @@ A brand new default theme for [Hexo].
 ### Install
 
 ``` bash
-$ git clone https://github.com/tommy351/hexo-theme-landscape.git themes/landscape
+$ git clone https://github.com/hexojs/hexo-theme-landscape.git themes/landscape
 ```
 
 **Landscape requires Hexo 2.4 and above.**
