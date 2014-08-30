@@ -45,7 +45,7 @@ $line-numbers
     pre
       border: none
       margin: 0
-      padding: 0
+      padding: 0 0 0 20px
     table
       margin: 0
       width: auto
@@ -63,7 +63,6 @@ $line-numbers
     .gutter pre
       @extend $line-numbers
       text-align: right
-      padding-right: 20px
     .line
       height: font-size * line-height
   .gist
@@ -84,9 +83,9 @@ $line-numbers
           @extend $line-numbers
           background: none
           border: none
-          padding: 0 20px 0 0
+          padding: 0
         .line-data
-          padding: 0 !important
+          padding: 0 0 0 20px !important
       .highlight
         margin: 0
         padding: 0
