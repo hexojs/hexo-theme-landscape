@@ -1,7 +1,8 @@
 # Header
 menu:
   Home: /
-  Archives: /archives
+  Archives: /archives/
+  Java Tutorials: /java/
 rss: /atom.xml
 
 # Content
@@ -9,7 +10,7 @@ excerpt_link: Read More
 fancybox: true
 
 # Sidebar
-sidebar: right
+sidebar: false
 widgets:
 - category
 - tag
@@ -18,7 +19,7 @@ widgets:
 - recent_posts
 
 # Miscellaneous
-google_analytics:
+google_analytics: UA-599349-1
 favicon: /favicon.png
 twitter:
 google_plus:
