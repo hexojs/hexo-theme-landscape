@@ -18,9 +18,9 @@ widgets:
 - archive
 - recent_posts
 
-# archive widget behavior
+# widget behavior
 archive_type: 'monthly'
-archive_count: true
+show_count: true
 
 # Miscellaneous
 google_analytics: UA-599349-1
