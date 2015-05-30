@@ -72,8 +72,9 @@ if sidebar and sidebar isnt bottom
       column(main-column)
 
 if sidebar is left
-  #main
-    float: right
+  @media mq-normal
+    #main
+      float: right
 
 @import "_extend"
 @import "_partial/header"
