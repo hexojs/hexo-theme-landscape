@@ -1,6 +1,6 @@
 <% if (pagination == 2){ %>
   <% page.posts.each(function(post,i){ %>
-    <% if ( 0 == config.front_per_page || i < config.front_per_page || i < config.per_page ) { %>
+    <% if ( typeof(config.front_posts) == 'undefined' || i < config.front_posts || i < config.per_page ) { %>
       <%- partial('article', {post: post, index: true}) %>
     <% } %>
   <% }) %>
