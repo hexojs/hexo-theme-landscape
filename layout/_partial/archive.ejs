@@ -12,6 +12,11 @@
       }) %>
     </nav>
   <% } %>
+  <% if ( theme.index_widgets !== null ){ %>
+    <% theme.index_widgets.forEach(function(widget){ %>
+      <%- partial('_widget/' + widget) %>
+    <% }) %>
+  <% } %>
 <% } else { %>
   <% var last; %>
   <% page.posts.each(function(post, i){ %>
