@@ -1,12 +1,14 @@
 categories: Категории
 search: Поиск
-tags: Ключевые слова
-tagcloud: Облако ключевых слов
+tags: Метки
+tagcloud: Облако меток
 tweets: Твиты
-prev: Предыдущая
-next: Следующая
+prev: Назад
+next: Вперед
 comment: Комментарии
 archive_a: Архив
 archive_b: "Архив: %s"
 page: Страница %d
 recent_posts: Недавние записи
+newer: Следующий
+older: Предыдущий
