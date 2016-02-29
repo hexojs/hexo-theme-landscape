@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <script type="text/javascript">
+    var site_url = '<%= config.url %>';
+    var site_protocol = site_url.split("/")[0];
+    if (window.location.protocol !== site_protocol){
+      var url_without_protocol = window.location.href.substr(site_protocol.length);
+      window.location = site_protocol + url_without_protocol;
+    }
+  </script>
   <meta charset="utf-8">
   <%
   var title = page.title;
