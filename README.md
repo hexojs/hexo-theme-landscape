@@ -105,7 +105,7 @@ All of them are enabled by default. You can edit them in `widget` setting.
 - **fancybox** - Only download [Fancybox].
 - **clean** - Clean temporarily files and downloaded files.
 
-[Hexo]: http://zespia.tw/hexo/
+[Hexo]: https://hexo.io/
 [Fancybox]: http://fancyapps.com/fancybox/
 [Font Awesome]: http://fontawesome.io/
 [Grunt]: http://gruntjs.com/
