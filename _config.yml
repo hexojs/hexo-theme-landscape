@@ -29,6 +29,7 @@ show_count: false
 
 # Miscellaneous
 google_analytics:
+gauges_analytics:
 favicon: /favicon.png
 twitter:
 google_plus:

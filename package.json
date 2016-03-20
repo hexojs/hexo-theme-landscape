@@ -1,6 +1,6 @@
 {
   "name": "hexo-theme-landscape",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "devDependencies": {
     "grunt": "~0.4.2",
