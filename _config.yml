@@ -30,6 +30,7 @@ show_count: false
 # Miscellaneous
 google_analytics:
 gauges_analytics:
+yandex_metrika:
 favicon: /favicon.png
 twitter:
 google_plus:
