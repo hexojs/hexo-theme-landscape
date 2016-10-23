@@ -1,19 +1,19 @@
 # Header
 menu:
-  Home: /
-  Archives: /archives
+  Главная: /
+  Архив: /archives
 rss: /atom.xml
 
 # Content
-excerpt_link: Read More
+excerpt_link: Читать Далее
 fancybox: true
 
 # Sidebar
 sidebar: right
 widgets:
-- category
-- tag
 - tagcloud
+#- tag
+- category
 - archive
 - recent_posts
 
@@ -29,7 +29,6 @@ show_count: false
 
 # Miscellaneous
 google_analytics:
-gauges_analytics:
 yandex_metrika:
 
 favicon: /favicon.png

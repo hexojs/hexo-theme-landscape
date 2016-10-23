@@ -14,7 +14,26 @@
 </script>
 <% } %>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<% if (config.hc_id){ %>
+<script type="text/javascript">
+  _hcwp = window._hcwp || [];
+  _hcwp.push({widget:"Stream", widget_id: <%= config.hc_id %>});
+  (function() {
+    if("HC_LOAD_INIT" in window)return;
+    HC_LOAD_INIT = true;
+    var lang = (navigator.language || navigator.systemLanguage || navigator.userLanguage || "en").substr(0, 2).toLowerCase();
+    var hcc = document.createElement("script"); hcc.type = "text/javascript"; hcc.async = true;
+    hcc.src = ("https:" == document.location.protocol ? "https" : "http")+"://w.hypercomments.com/widget/hc/<%= config.hc_id %>/"+lang+"/widget.js";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hcc, s.nextSibling);
+  })();
+</script>
+<script type="text/javascript">
+  _hcwp.push({widget:"Bloggerstream", widget_id: <%= config.hc_id %>, selector:".article-comment-link", label:"<%= __('comment') %> ({%COUNT%})"});
+</script>
+<% } %>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
 <% if (theme.fancybox){ %>
   <%- css('fancybox/jquery.fancybox') %>
@@ -23,5 +42,4 @@
 
 <%- js('js/script') %>
 <%- partial('google-analytics') %>
-<%- partial('gauges-analytics') %>
 <%- partial('yandex-metrika') %>
