@@ -31,8 +31,11 @@ show_count: false
 google_analytics:
 yandex_metrika:
 
-favicon: /favicon.png
-twitter:
+favicon: /favicon.ico
+twitter: krasovsky_s
 google_plus:
 fb_admins:
 fb_app_id:
+
+vk: lord.protector
+tg: kraso

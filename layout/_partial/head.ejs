@@ -28,5 +28,11 @@
   <% if (theme.favicon){ %>
     <link rel="icon" href="<%- theme.favicon %>">
   <% } %>
+  <% if (page.cover) { %>
+    <meta property="og:image" content="<%= page.cover %>" />
+  <% } %>
+  <% if (page.tags && page.tags.length) { %>
+    <meta name="keywords" content="<% page.tags.forEach(function(tag) { %><%= tag.name %>,<% }); %>" />
+  <% } %>
   <%- css('css/style') %>
 </head>
