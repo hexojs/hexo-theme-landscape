@@ -28,7 +28,7 @@ archive_type: 'monthly'
 show_count: false
 
 # Miscellaneous
-google_analytics:
+google_analytics: UA-81679382-1
 yandex_metrika:
 
 favicon: /favicon.ico
