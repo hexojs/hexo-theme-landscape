@@ -26,7 +26,13 @@
 <%- open_graph({twitter_id: theme.twitter, google_plus: theme.google_plus, fb_admins: theme.fb_admins, fb_app_id: theme.fb_app_id}) %>
 
 <% if (theme.rss){ %><link rel="alternate" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml"><% } %>
-<% if (theme.favicon){ %><link rel="icon" href="<%- theme.favicon %>"><% } %>
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5f4482">
+<meta name="theme-color" content="#5f4482">
 
 <%- css('css/style') %>
 </head>
