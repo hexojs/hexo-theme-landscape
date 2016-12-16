@@ -10,8 +10,8 @@ archive_a: Arquivos
 archive_b: "Arquivos: %s"
 page: Página %d
 recent_posts: Postagens Recentes
-newer: Mais Novo
-older: Mais Velho
+newer: Mais Recente
+older: Mais Antigo
 share: Compartilhar
 powered_by: Desenvolvido por
 rss_feed: Feed RSS
