@@ -78,10 +78,11 @@
     border-bottom: 1px solid color-border
     padding: 10px 0
   blockquote
-    font-family: font-serif
-    font-size: 1.4em
-    margin: line-height 20px
-    text-align: center
+    border: 1px solid #ddd;
+    border-left: 4px solid #ddd;
+    padding: 0 20px;
+    position: relative;
+    margin-left: 45px;
     footer
       font-size: font-size
       margin: line-height 0
@@ -90,6 +91,17 @@
         &:before
           content: "—"
           padding: 0 0.5em
+  blockquote:before
+    content: "\f10d";
+    position: absolute;
+    left: -45px;
+    top: 20px;
+    font-size: 25px;
+    font-family: FontAwesome;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    color: #ddd;
   .pullquote
     text-align: left
     width: 45%
