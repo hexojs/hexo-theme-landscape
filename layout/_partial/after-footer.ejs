@@ -13,13 +13,11 @@
   })();
 </script>
 <% } %>
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
 <% if (theme.fancybox){ %>
-  <%- css('fancybox/jquery.fancybox') %>
-  <%- js('fancybox/jquery.fancybox.pack') %>
-<% } %>
-
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.min.css" type="text/css">
+  <script src="//cdn.jsdelivr.net/g/jquery@2.1.4,fancybox@2.1.5"></script>
+<% } else {%>
+  <script src="//cdn.jsdelivr.net/jquery/2.1.4/jquery.min.js"></script>
+<% }%>
 <%- js('js/script') %>
 <%- partial('gauges-analytics') %>
