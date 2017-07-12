@@ -21,6 +21,10 @@
 %>
 <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
 
+<% if (is_post() && config.generator_amp){ %>
+  <link rel="amphtml" href="<%= config.url %>/<%= page.path %>/amp/index.html">
+<% } %>
+
 <% if (page.tags && page.tags.length) { %><meta name="keywords" content="<% page.tags.forEach(function(tag) { %><%= tag.name %>,<% }); %>" /><% } %>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <%- open_graph({twitter_id: theme.twitter, google_plus: theme.google_plus, fb_admins: theme.fb_admins, fb_app_id: theme.fb_app_id}) %>

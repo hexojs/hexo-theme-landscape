@@ -1,6 +1,7 @@
 # Header
 menu:
   Главная: /
+  Боты: /bots
   Архив: /archives
 rss: /atom.xml
 
@@ -29,7 +30,7 @@ show_count: false
 
 # Miscellaneous
 google_analytics: UA-81679382-1
-yandex_metrika:
+yandex_metrika: 44985007
 
 favicon: /favicon.ico
 twitter: krasovsky_s
