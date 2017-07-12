@@ -1,19 +1,20 @@
 # Header
 menu:
-  Home: /
-  Archives: /archives
+  Главная: /
+  Боты: /bots
+  Архив: /archives
 rss: /atom.xml
 
 # Content
-excerpt_link: Read More
+excerpt_link: Читать Далее
 fancybox: true
 
 # Sidebar
 sidebar: right
 widgets:
-- category
-- tag
 - tagcloud
+#- tag
+- category
 - archive
 - recent_posts
 
@@ -28,10 +29,15 @@ archive_type: 'monthly'
 show_count: false
 
 # Miscellaneous
-google_analytics:
-gauges_analytics:
-favicon: /favicon.png
-twitter:
+google_analytics: UA-81679382-1
+yandex_metrika: 44985007
+
+favicon: /favicon.ico
+twitter: krasovsky_s
 google_plus:
 fb_admins:
 fb_app_id:
+
+vk: lord.protector
+tg: kraso
+gh: Lord-Protector

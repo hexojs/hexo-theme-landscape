@@ -27,6 +27,9 @@
       <% if (post.comments && config.disqus_shortname){ %>
         <a href="<%- post.permalink %>#disqus_thread" class="article-comment-link"><%= __('comment') %></a>
       <% } %>
+	  <% if (post.comments && config.hc_id){ %>
+        <a href="<%- post.permalink %>#hypercomments_widget" class="article-comment-link"><%= __('comment') %></a>
+      <% } %>
       <%- partial('post/tag') %>
     </footer>
   </div>
@@ -35,10 +38,13 @@
   <% } %>
 </article>
 
-<% if (!index && post.comments && config.disqus_shortname){ %>
+<% if (!index && post.comments && (config.disqus_shortname || config.hc_id)){ %>
 <section id="comments">
   <div id="disqus_thread">
     <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+  <div id="hypercomments_widget">
+    <noscript>Please enable JavaScript to view the <a href="http://hypercomments.com" class="hc-link" title="comments widget">comments powered by HyperComments</a></noscript>
   </div>
 </section>
 <% } %>
