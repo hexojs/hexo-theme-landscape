@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<%
+  <meta charset="utf-8">
+  <%- partial('google-analytics') %>
+  <%
   var title = page.title;
 
   if (is_archive()){
@@ -18,25 +19,26 @@
   } else if (is_tag()){
     title = __('tag') + ': ' + page.tag;
   }
-%>
-<title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
-
-<% if (is_post() && config.generator_amp){ %>
-  <link rel="amphtml" href="<%= config.url %>/<%= page.path %>/amp/index.html">
-<% } %>
-
-<% if (page.tags && page.tags.length) { %><meta name="keywords" content="<% page.tags.forEach(function(tag) { %><%= tag.name %>,<% }); %>" /><% } %>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<%- open_graph({twitter_id: theme.twitter, google_plus: theme.google_plus, fb_admins: theme.fb_admins, fb_app_id: theme.fb_app_id}) %>
-
-<% if (theme.rss){ %><link rel="alternate" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml"><% } %>
-
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5f4482">
-<meta name="theme-color" content="#5f4482">
-
-<%- css('css/style') %>
+  %>
+  <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
+  <% if (page.tags && page.tags.length) { %><meta name="keywords" content="<% page.tags.forEach(function(tag) { %><%= tag.name %>,<% }); %>" /><% } %>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <%- open_graph({twitter_id: theme.twitter, google_plus: theme.google_plus, fb_admins: theme.fb_admins, fb_app_id: theme.fb_app_id}) %>
+  <% if (theme.rss){ %>
+    <link rel="alternate" href="<%= url_for(theme.rss) %>" title="<%= config.title %>" type="application/atom+xml">
+  <% } %>
+  <% if (theme.favicon){ %>
+    <link rel="icon" href="<%- theme.favicon %>">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5f4482">
+    <meta name="theme-color" content="#5f4482">
+  <% } %>
+  <% if (config.highlight.enable){ %>
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <% } %>
+    
+  <%- css('css/style') %>
 </head>
