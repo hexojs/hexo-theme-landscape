@@ -33,4 +33,25 @@
     <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   <% } %>
   <%- css('css/style') %>
+  <% if (page.description){ %>
+    <meta name="description" content="<%= page.description %>">
+  <% } else if (config.description){ %>
+    <meta name="description" content="<%= config.description %>">
+  <% } else if (page.excerpt){ %>
+    <meta name="description" content="<%= strip_html(page.excerpt).replace(/^\s*/, '').replace(/\s*$/, '') %>">
+  <% } else if (page.content){ %>
+    <meta name="description" content="<%= strip_html(page.content).replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 150) %>">
+  <% } %>
+  <% if (page.keywords){ %>
+    <meta name="keywords" content="<%= page.keywords %>">
+  <% } else if (page.tags){ %>
+    <%
+      var thistags=[];
+      page.tags.each(function(k){
+        thistags.push(k.name);
+      }) %>
+    <meta name="keywords" content="<%= thistags %>">
+  <% } else if (config.keywords){ %>
+    <meta name="keywords" content="<%= config.keywords %>">
+  <% } %>
 </head>
