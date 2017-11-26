@@ -2,6 +2,9 @@
 menu:
   Home: /
   Archives: /archives
+  Profile: /profile
+  About: /about
+  Series: /series
 rss: /atom.xml
 
 # Content
