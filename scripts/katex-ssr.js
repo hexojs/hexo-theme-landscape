@@ -1,7 +1,6 @@
 'use strict';
 
 var katex = require('katex');
-const jsdom = require('jsdom')
 
 // from splitAtDelimiters.js
 const findEndOfMath = function (delimiter, text, startIndex) {
