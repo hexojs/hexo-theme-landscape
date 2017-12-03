@@ -31,7 +31,7 @@ archive_type: 'monthly'
 show_count: false
 
 # Miscellaneous
-google_analytics:
+google_analytics: 'UA-61676745-1'
 gauges_analytics:
 favicon: '/icons/favicon.ico'
 apple_touch_icon: '/icons/apple-touch-icon.png'
