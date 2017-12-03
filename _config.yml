@@ -33,7 +33,8 @@ show_count: false
 # Miscellaneous
 google_analytics:
 gauges_analytics:
-favicon: /favicon.png
+favicon: '/icons/favicon.ico'
+apple_touch_icon: '/icons/apple-touch-icon.png'
 twitter:
 google_plus:
 fb_admins:
