@@ -15,7 +15,7 @@ const rAuthor = /(.+)/;
  *   Quote string
  *   {% end__gorgeous_quote %}
  */
-function _wrap(ctx) {
+function gq_wrap(ctx) {
     return function gorgeousQuoteTag(args, content) {
         if (args.length <= 0) {
             throw new Error("Too few arguments. (Before read <title>)");
@@ -82,4 +82,4 @@ function _wrap(ctx) {
     };
 }
 
-hexo.extend.tag.register('__gorgeous_quote', _wrap(hexo), {ends: true});
+hexo.extend.tag.register('__gorgeous_quote', gq_wrap(hexo), {ends: true});
