@@ -15,7 +15,7 @@ highlight-purple = #cc99cc
 $code-block
   background: highlight-background
   margin: 0 article-padding * -1
-  padding: 15px article-padding
+  padding: 15px article-padding - 5
   border-style: solid
   border-color: color-border
   border-width: 1px 0
@@ -64,10 +64,26 @@ $line-numbers
       @extend $line-numbers
       text-align: right
       padding-right: 20px
+      width: 22px
     .line
       height: font-size * line-height
     .line.marked
       background: highlight-selection
+    &.pre-omit-line
+      border-bottom: 0
+    &.omit-line
+      height: font-size + 10
+      border-top: 0
+      border-bottom: 0
+      padding-top: article-padding - 13 - 1 // strange...
+      padding-bottom: article-padding - 13
+      & > table
+        height: font-size + 10
+      td.gutter
+        .line
+          opacity: 0
+    &.post-omit-line
+      border-top: 0
   .gist
     margin: 0 article-padding * -1
     border-style: solid
