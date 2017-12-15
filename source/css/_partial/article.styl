@@ -139,10 +139,21 @@
   .collection2
     & > div
       @media mq-normal
-        margin: 5px;
-        flex-basis: 300px;
-        flex-grow: 1;
-        flex-shrink: 0;
+        margin: 5px
+        flex-basis: 300px
+        flex-grow: 1
+        flex-shrink: 0
+  .cf
+    &:after
+      content: ""
+      display: block
+      clear: both
+    .left
+      float: left
+      margin-right: 10px
+    .right
+      float: right
+      margin-left: 10px
 
 .article-more-link a
   display: inline-block
