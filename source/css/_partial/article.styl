@@ -132,6 +132,17 @@
       margin-top: 0
   span.muted
     opacity: 0.5
+  [class^="collection"]
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
+  .collection2
+    & > div
+      @media mq-normal
+        margin: 5px;
+        flex-basis: 300px;
+        flex-grow: 1;
+        flex-shrink: 0;
 
 .article-more-link a
   display: inline-block
