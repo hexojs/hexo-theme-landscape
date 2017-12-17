@@ -82,6 +82,16 @@
     font-size: 1.4em
     margin: line-height 20px
     text-align: center
+    header
+      & > h1
+        font-size: 1.8em
+        display: inline-block
+        margin: 0
+      & > p
+        display: inline-block
+        margin: 0 8px
+    & > div
+      margin: 0
     footer
       font-size: font-size
       margin: line-height 0
@@ -110,7 +120,7 @@
   // http://webdesignerwall.com/tutorials/css-elastic-videos
   .video-container
     position: relative
-    padding-top: (9 / 16 * 100)% // 16:9 ratio
+    padding-top: (9 / 16 * 100) % // 16:9 ratio
     height: 0
     overflow: hidden
     iframe, object, embed
@@ -120,6 +130,38 @@
       width: 100%
       height: 100%
       margin-top: 0
+  span.muted
+    opacity: 0.5
+  [class^="collection"]
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
+  .collection2
+    & > div
+      @media mq-normal
+        margin: 5px
+        flex-basis: 300px
+        flex-grow: 1
+        flex-shrink: 0
+  .cf
+    &:after
+      content: ""
+      display: block
+      clear: both
+    .left
+      float: left
+      margin-right: 10px
+    .right
+      float: right
+      margin-left: 10px
+  .advent-calender
+    margin: line-height 0
+    header
+      text-align: center
+    .yesterday
+      text-align: left
+    .tomorrow
+      text-align: right
 
 .article-more-link a
   display: inline-block
@@ -322,6 +364,7 @@ $article-share-link
     display: block
     max-width: 100%
     margin: 0 auto
+
 /*
 $article-gallery-ctrl
   position: absolute

@@ -2,6 +2,9 @@
 menu:
   Home: /
   Archives: /archives
+  Profile: /profile
+  About: /about
+  Series: /series
 rss: /atom.xml
 
 # Content
@@ -28,10 +31,14 @@ archive_type: 'monthly'
 show_count: false
 
 # Miscellaneous
-google_analytics:
+google_analytics: 'UA-61676745-1'
 gauges_analytics:
-favicon: /favicon.png
+favicon: '/icons/favicon.ico'
+apple_touch_icon: '/icons/apple-touch-icon.png'
 twitter:
 google_plus:
 fb_admins:
 fb_app_id:
+
+indications:
+  - advent-calender

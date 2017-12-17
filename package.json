@@ -1,12 +1,17 @@
 {
-  "name": "hexo-theme-landscape",
-  "version": "0.0.2",
+  "name": "hexo-theme-LaVerdaLuno",
+  "version": "0.0.1",
   "private": true,
+  "dependencies": {
+    "katex": "^0.8.3",
+    "titlecase": "^1.1.2"
+  },
   "devDependencies": {
+    "cheerio": "^1.0.0-rc.2",
     "grunt": "~0.4.2",
-    "load-grunt-tasks": "~0.2.0",
-    "grunt-git": "~0.2.2",
     "grunt-contrib-clean": "~0.5.0",
-    "grunt-contrib-copy": "~0.4.1"
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-git": "~0.2.2",
+    "load-grunt-tasks": "~0.2.0"
   }
 }

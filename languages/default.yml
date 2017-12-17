@@ -17,3 +17,7 @@ powered_by: Powered by
 rss_feed: RSS Feed
 category: Category
 tag: Tag
+
+# custom
+references: References
+nth_day: "Day %d"
