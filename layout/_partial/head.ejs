@@ -33,5 +33,5 @@
     <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   <% } %>
   <!-- Pull style sheets from theme and users site -->
-  <%- fileLister('css/', '.styl', function(file) {return '<link rel="stylesheet" href="css/'+ file.replace('.styl', '.css') + '">';}) %>
+  <%- fileLister('css/', '.styl', function(file) {return '<link rel="stylesheet" href="/css/'+ file.replace('.styl', '.css') + '">';}) %>
 </head>
