@@ -32,5 +32,6 @@
   <% if (config.highlight.enable){ %>
     <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   <% } %>
-  <%- css('css/style') %>
+  <!-- Pull style sheets from theme and users site -->
+  <%- fileLister('css/', '.styl', function(file) {return '<link rel="stylesheet" href="css/'+ file.replace('.styl', '.css') + '">';}) %>
 </head>
