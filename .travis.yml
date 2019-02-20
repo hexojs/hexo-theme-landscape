@@ -10,8 +10,8 @@ script:
   # For older versions of npm (ie. the one bundled with Node 6), we need to manually run `prepare`
   # to build the project. You can still install and consume the package without any issue.
   #- if [[ "$TRAVIS_NODE_VERSION" == "6" ]]; then npm run prepare; fi
-  - npm run eslint
-  - npm run test-cov
+  #- npm run eslint
+  - npm run grunt
 
 after_script:
   - npm install coveralls
