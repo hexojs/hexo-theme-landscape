@@ -4,13 +4,15 @@ module.exports = function(grunt){
       fontawesome: {
         options: {
           repository: 'https://github.com/FortAwesome/Font-Awesome.git',
-          directory: 'tmp/fontawesome'
+          directory: 'tmp/fontawesome',
+          branch: 'fa-4'
         },
       },
       fancybox: {
         options: {
           repository: 'https://github.com/fancyapps/fancyBox.git',
-          directory: 'tmp/fancybox'
+          directory: 'tmp/fancybox',
+          branch: '2.1'
         }
       }
     },
