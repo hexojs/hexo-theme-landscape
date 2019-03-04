@@ -89,7 +89,7 @@
   // Caption
   $('.article-entry').each(function(i){
     $(this).find('img').each(function(){
-      if ($(this).parent().hasClass('fancybox')) return;
+      if ($(this).parent().hasClass('fancybox') || $(this).parent().is('a')) return;
 
       var alt = this.alt;
 
