@@ -24,7 +24,7 @@
 <% var sp  = theme.social[i].split('||'); %>
 <% var link = url_for(sp[0].trim()); %>
 <% var font_code = sp[1].trim(); %>
-          <a id="nav-social-link" class="fas fa-<%= font_code %>" href="<%- link %>" title="<%= i %>"></a>
+          <a id="nav-social-link" class="fab fa-<%= font_code %>" href="<%- link %>" title="<%= i %>"></a>
 <% } %>
         <% } %>
         <% if (theme.rss){ %>
