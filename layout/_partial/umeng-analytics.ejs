@@ -1,0 +1,14 @@
+<% if (theme.umeng_analytics){ %>
+<!-- umeng Analytics -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+    var cnzz_s_tag = document.createElement("script");
+    cnzz_s_tag.async = true;
+    cnzz_s_tag.src = "https://w.cnzz.com/c.php?id=<%= theme.umeng_analytics %>&async=1";
+    var root_s = document.getElementsByTagName("script")[0]; 
+    root_s.parentNode.insertBefore(cnzz_s_tag, root_s);
+})();
+</script>
+<!-- End umeng Analytics -->
+<% } %>

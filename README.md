@@ -49,6 +49,9 @@ widgets:
 
 # Miscellaneous
 google_analytics:
+gauges_analytics:
+baidu_analytics:
+umeng_analytics:
 favicon: /favicon.png
 twitter:
 google_plus:
@@ -61,6 +64,9 @@ google_plus:
 - **sidebar** - Sidebar style. You can choose `left`, `right`, `bottom` or `false`.
 - **widgets** - Widgets displaying in sidebar
 - **google_analytics** - Google Analytics ID
+- **gauges_analytics** - Gauges Analytics ID
+- **baidu_analytics** - Baidu Analytics ID
+- **umeng_analytics** - Umeng Analytics ID
 - **favicon** - Favicon path
 - **twitter** - Twiiter ID
 - **google_plus** - Google+ ID

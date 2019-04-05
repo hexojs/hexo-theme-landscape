@@ -30,6 +30,8 @@ show_count: false
 # Miscellaneous
 google_analytics:
 gauges_analytics:
+baidu_analytics:
+umeng_analytics:
 favicon: /favicon.png
 twitter:
 google_plus:
