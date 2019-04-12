@@ -3,7 +3,7 @@
   "version": "0.0.2",
   "private": true,
   "devDependencies": {
-    "grunt": "~0.4.2",
+    "grunt": "~1.0.4",
     "load-grunt-tasks": "~3.5.2",
     "grunt-git": "~0.3.7",
     "grunt-contrib-clean": "~2.0.0",
