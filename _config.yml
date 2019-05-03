@@ -1,11 +1,12 @@
 # Header
 menu:
-  Home: /
-  Archives: /archives
+  主页: /
+  归档: /archives
+  关于: /about
 rss: /atom.xml
 
 # Content
-excerpt_link: Read More
+excerpt_link: 阅读全文
 fancybox: true
 
 # Sidebar
@@ -30,8 +31,8 @@ show_count: false
 # Miscellaneous
 google_analytics:
 gauges_analytics:
-baidu_analytics:
-umeng_analytics:
+baidu_analytics: da6d57a7f22eab05b99fae5cc3f999ee
+umeng_analytics: 1276089079
 favicon: /favicon.png
 twitter:
 google_plus:

@@ -19,7 +19,13 @@
           </p>
         <% } %>
       <% } else { %>
+        <% if (post.toc != false){ %>
+          <nav id="toc">
+            <%- toc(post.content, {list_number: false}) %>
+          </nav>
+        <% } %>
         <%- post.content %>
+        <%- partial('post-copyright') %>
       <% } %>
     </div>
     <footer class="article-footer">
