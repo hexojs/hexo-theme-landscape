@@ -33,6 +33,7 @@ menu:
   Home: /
   Archives: /archives
 rss: /atom.xml
+banner: images/banner.jpg
 
 # Content
 excerpt_link: Read More
@@ -55,6 +56,7 @@ twitter:
 
 - **menu** - Navigation menu
 - **rss** - RSS link
+- **banner** - Path of title banner image of page top
 - **excerpt_link** - "Read More" link at the bottom of excerpted articles. `false` to hide the link.
 - **fancybox** - Enable [Fancybox]
 - **sidebar** - Sidebar style. You can choose `left`, `right`, `bottom` or `false`.
