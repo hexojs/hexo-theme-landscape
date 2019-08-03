@@ -6,6 +6,3 @@ node_js:
   - "stable"
   - "node"
 
-script:
-  - npm install -g grunt-cli
-  - grunt
