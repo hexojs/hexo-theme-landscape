@@ -38,7 +38,7 @@ banner: images/banner.jpg
 # Content
 excerpt_link: Read More
 fancybox: true
-recent_posts_limits: 10
+recent_posts_limits: 5
 
 # Sidebar
 sidebar: right
@@ -60,7 +60,7 @@ twitter:
 - **banner** - Path of title banner image of page top
 - **excerpt_link** - "Read More" link at the bottom of excerpted articles. `false` to hide the link.
 - **fancybox** - Enable [Fancybox]
-- **recent_posts_limits** - How many post in Home page.
+- **recent_posts_limits** - How many posts display in Home page.
 - **sidebar** - Sidebar style. You can choose `left`, `right`, `bottom` or `false`.
 - **widgets** - Widgets displaying in sidebar
 - **google_analytics** - Google Analytics ID
