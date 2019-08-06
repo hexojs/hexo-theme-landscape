@@ -18,6 +18,12 @@ $ git clone https://github.com/hexojs/hexo-theme-landscape.git themes/landscape
 
 Modify `theme` setting in `_config.yml` to `landscape`.
 
+``` diff
+_config.yml
+- theme: some-theme
++ theme: landscape
+```
+
 ### Update
 
 ``` bash
