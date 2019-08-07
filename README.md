@@ -98,3 +98,5 @@ Landscape provides 5 built-in widgets:
 - recent_posts
 
 All of them are enabled by default. You can edit them in `widget` setting.
+
+[Fancybox]: https://github.com/fancyapps/fancyBox
