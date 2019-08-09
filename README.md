@@ -12,7 +12,7 @@ A brand new default theme for [Hexo].
 $ git clone --depth 1 https://github.com/hexojs/hexo-theme-landscape themes/landscape
 ```
 
-**Landscape requires Hexo 2.4 and above.** If you would like to enable the RSS, the [hexo-generate-feed] plugin is also required.
+**Landscape requires Hexo 2.4 and above.** If you would like to enable the RSS, the [hexo-generator-feed](https://github.com/hexojs/hexo-generator-feed) plugin is also required.
 
 ### Enable
 
