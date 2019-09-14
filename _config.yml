@@ -49,3 +49,9 @@ valine:
   lang: zh-cn # i18n: zh-cn/en
   placeholder: Just go go # valine comment input placeholder(like: Please leave your footprints )
   guest_info: nick,mail,link #valine comment header info
+
+# social links, the key is used to find the font in fontawesome 4.7.0(https://fontawesome.com/v4.7.0/), e.g. github means <span class="fa fa-github"></span>, the value is the link
+# social:
+#  github: https://github.com/your_github_account
+#  twitter: https://twitter.com/your_twitter_account
+#  telegram: https://t.me/youryour_telegram_account
