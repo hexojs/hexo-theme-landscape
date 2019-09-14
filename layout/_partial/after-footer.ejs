@@ -24,8 +24,8 @@
 <%- partial('gauges-analytics') %>
 
 <% if(theme.valine.enable && theme.valine.appId && theme.valine.appKey){ %>
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  <%- js('https://cdn.jsdelivr.net/npm/leancloud-storage@3/dist/av-min.js') %>
+  <%- js('https://cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js') %>
 <script>
     var GUEST_INFO = ['nick','mail','link'];
     var guest_info = '<%= theme.valine.guest_info %>'.split(',').filter(function(item){
