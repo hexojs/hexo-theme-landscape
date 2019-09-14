@@ -60,12 +60,13 @@ google_analytics:
 favicon: /favicon.png
 twitter:
 
-# social links, the key is used to find the font in fontawesome 4.7.0(https://fontawesome.com/v4.7.0/), e.g. github means <span class="fa fa-github"></span>, the value is the link
-# social:
+# Social media links
+# Each name must correspond to the icon name of Font Awesome 4
+# https://fontawesome.com/v4.7.0/icons/
+#social:
 #  github: https://github.com/your_github_account
 #  twitter: https://twitter.com/your_twitter_account
-#  telegram: https://t.me/youryour_telegram_account
-
+#  telegram: https://t.me/your_telegram_account
 ```
 
 - **menu** - Navigation menu
@@ -114,15 +115,9 @@ You can add your social media links like this:
 social:
   github: https://github.com/your_github_account
   twitter: https://twitter.com/your_twitter_account
-  telegram: https://t.me/youryour_telegram_account
+  telegram: https://t.me/your_telegram_account
 ```
 
-They will appear at the top right conner of the page alongside rss feeds and search icon. Landscape use fontawesome version [*4.7.0*](https://fontawesome.com/v4.7.0/), and the key in each key-value pair is used to find the icon, e.g. github means `<span class="fa fa-github"></span>`, the value is the link. Your can search for avalilable icons and their names [here](https://fontawesome.com/v4.7.0/icons/). Note that the twitter-id you set at top level of _config.yml like:
-
-```
-twitter: twitter_id
-```
-
-is currently *not* used to generate a social link icon.
+Specified links will appear at the top right corner of the page, alongside the rss and search icons. Each name must correspond to the icon name of [Font Awesome 4](https://fontawesome.com/v4.7.0/icons/), e.g. github means `<span class="fa fa-github"></span>`.
 
 [Fancybox]: https://github.com/fancyapps/fancyBox
