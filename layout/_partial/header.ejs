@@ -20,12 +20,9 @@
       </nav>
       <nav id="sub-nav">
         <% if (theme.social){ %>
-		<% for (var i in theme.social) {%>
-<% var sp  = theme.social[i].split('||'); %>
-<% var link = url_for(sp[0].trim()); %>
-<% var font_code = sp[1].trim(); %>
-          <a id="nav-social-link" class="fab fa-<%= font_code %>" href="<%- link %>" title="<%= i %>"></a>
-<% } %>
+	  <% for (var i in theme.social) {%>
+            <a class="nav-icon" href="<%- theme.social[i] %>"><span class="fa fa-<%= i %>"></span></a>
+          <% } %>
         <% } %>
         <% if (theme.rss){ %>
           <a id="nav-rss-link" class="nav-icon" href="<%- url_for(theme.rss) %>" title="<%= __('rss_feed') %>"></a>
