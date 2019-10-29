@@ -13,34 +13,41 @@
 </script>
 <% } %>
 
-<%- js('js/jquery-3.4.1.min.js') %>
+<%- fragment_cache('after_footer_custom', () => {
+    let html = ''
+    html += js('js/jquery-3.4.1.min.js');
+    if (theme.fancybox) {
+        html += js('fancybox/jquery.fancybox.min.js')
+    }
 
-<% if (theme.fancybox){ %>
-  <%- js('fancybox/jquery.fancybox.min.js') %>
-<% } %>
+    html += js('js/script');
+    html += partial('gauges-analytics')
 
-<%- js('js/script') %>
-<%- partial('gauges-analytics') %>
+    if (theme.valine.enable && theme.valine.appId && theme.valine.appKey) {
+        html += js('https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js');
 
-<% if(theme.valine.enable && theme.valine.appId && theme.valine.appKey){ %>
-  <%- js('https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js') %>
-<script>
-    var GUEST_INFO = ['nick','mail','link'];
-    var guest_info = '<%= theme.valine.guest_info %>'.split(',').filter(function(item){
-        return GUEST_INFO.indexOf(item) > -1
-    });
-    var notify = '<%= theme.valine.notify %>' == true;
-    var verify = '<%= theme.valine.verify %>' == true;
-    new Valine({
-        el: '.vcomment',
-        notify: notify,
-        verify: verify,
-        appId: "<%= theme.valine.appId %>",
-        appKey: "<%= theme.valine.appKey %>",
-        placeholder: "<%= theme.valine.placeholder %>",
-        pageSize:'<%= theme.valine.pageSize %>',
-        avatar:'<%= theme.valine.avatar %>',
-        lang:'<%= theme.valine.lang %>'
-    });
-</script>
-<% } %>
+        html += `
+        <script>
+            var GUEST_INFO = ['nick','mail','link'];
+            var guest_info = '${theme.valine.guest_info}'.split(',').filter(function(item){
+                return GUEST_INFO.indexOf(item) > -1
+            });
+            var notify = '${theme.valine.notify}' == true;
+            var verify = '${theme.valine.verify}' == true;
+            new Valine({
+                el: '.vcomment',
+                notify: notify,
+                verify: verify,
+                appId: "${theme.valine.appId}",
+                appKey: "${theme.valine.appKey}",
+                placeholder: "${theme.valine.placeholder}",
+                pageSize:'${theme.valine.pageSize}',
+                avatar:'${theme.valine.avatar}',
+                lang:'${theme.valine.lang}'
+            });
+        </script>
+        `
+    }
+
+    return html
+}) %>

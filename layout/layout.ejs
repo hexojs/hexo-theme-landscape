@@ -7,9 +7,18 @@
       <%- partial('_partial/header', null, {cache: !config.relative_link}) %>
       <div class="outer">
         <section id="main"><%- body %></section>
-        <% if (theme.sidebar && theme.sidebar !== 'bottom'){ %>
-          <%- partial('_partial/sidebar', null, {cache: !config.relative_link}) %>
+
+        <% if (!config.relative_link) { %>
+            <%- fragment_cache('sidebar', function() {
+                if (theme.sidebar && theme.sidebar !== 'bottom') return partial('_partial/sidebar');
+                return '';
+            }) %>
+        <% } else { %>
+            <% if (theme.sidebar && theme.sidebar !== 'bottom') { %>
+                <%- partial('_partial/sidebar') %>
+            <% } %>
         <% } %>
+
       </div>
       <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
     </div>
