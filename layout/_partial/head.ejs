@@ -21,8 +21,18 @@
   <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <%- open_graph({twitter_id: theme.twitter, fb_admins: theme.fb_admins, fb_app_id: theme.fb_app_id}) %>
-  <% if (theme.rss){ %>
-    <link rel="alternate" href="<%= url_for(theme.rss) %>" title="<%= config.title %>" type="application/atom+xml">
+  <% if (config.feed) { %>
+    <% if (config.feed.type.length && config.feed.path.length) { %>
+      <% if (typeof config.feed.type === 'string' )) { %>
+        <link rel="alternate" type="application/<%- config.feed.type.replace(/2$/, '') %>+xml" title="<%= config.title %>" href="<%- url_for(config.feed.path) %>">
+      <% } else { %>
+        <% for (const i in config.feed.type) { %>
+          <link rel="alternate" type="application/<%- config.feed.type[i].replace(/2$/, '') %>+xml" title="<%= config.title %>" href="<%- url_for(config.feed.path[i]) %>">
+        <% } %>
+      <% } %>
+    <% } %>
+  <% } else if (theme.rss) { %>
+    <link rel="alternate" href="<%- url_for(theme.rss) %>" title="<%= config.title %>" type="application/atom+xml">
   <% } %>
   <% if (theme.favicon){ %>
     <link rel="icon" href="<%- theme.favicon %>">
