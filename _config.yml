@@ -8,7 +8,6 @@ banner: "images/banner.jpg"
 # Content
 excerpt_link: Read More
 fancybox: true
-recent_posts_limits: 5
 
 # Sidebar
 sidebar: right
@@ -28,6 +27,7 @@ index_widgets:
 # widget behavior
 archive_type: 'monthly'
 show_count: false
+recent_posts_limits: 5
 
 # Miscellaneous
 google_analytics:
