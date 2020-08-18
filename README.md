@@ -40,6 +40,7 @@ menu:
   Archives: /archives
 rss: /atom.xml
 banner: images/banner.jpg
+subtitle: This a subtitle
 
 # Content
 excerpt_link: Read More
