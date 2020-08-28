@@ -19,6 +19,11 @@
         <% } %>
       </nav>
       <nav id="sub-nav">
+        <% if (theme.links) { %>
+          <% for (const i in theme.links) {%>
+            <a class="nav-icon" href="<%- url_for(theme.links[i]) %>"><span class="fa fa-<%= i %>"></span></a>
+          <% } %>
+        <% } %>
         <% if (theme.rss){ %>
           <a id="nav-rss-link" class="nav-icon" href="<%- url_for(theme.rss) %>" title="<%= __('rss_feed') %>"></a>
         <% } %>
