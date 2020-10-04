@@ -64,3 +64,11 @@ valine:
   lang: zh-cn # i18n: zh-cn/en
   placeholder: Just go go # valine comment input placeholder(like: Please leave your footprints )
   guest_info: nick,mail,link #valine comment header info
+
+# Social media links
+# Each name must correspond to the icon name of Font Awesome 4
+# https://fontawesome.com/v4.7.0/icons/
+#social:
+#  github: https://github.com/your_github_account
+#  twitter: https://twitter.com/your_twitter_account
+#  telegram: https://t.me/your_telegram_account

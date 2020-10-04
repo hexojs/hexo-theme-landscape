@@ -64,6 +64,14 @@ widgets:
 google_analytics:
 favicon: /favicon.png
 twitter:
+
+# Social media links
+# Each name must correspond to the icon name of Font Awesome 4
+# https://fontawesome.com/v4.7.0/icons/
+#social:
+#  github: https://github.com/your_github_account
+#  twitter: https://twitter.com/your_twitter_account
+#  telegram: https://t.me/your_telegram_account
 ```
 
 - **menu** - Navigation menu
@@ -103,5 +111,18 @@ Landscape provides 5 built-in widgets:
 - recent_posts
 
 All of them are enabled by default. You can edit them in `widget` setting.
+
+### Social Links
+
+You can add your social media links like this:
+
+```
+social:
+  github: https://github.com/your_github_account
+  twitter: https://twitter.com/your_twitter_account
+  telegram: https://t.me/your_telegram_account
+```
+
+Specified links will appear at the top right corner of the page, alongside the rss and search icons. Each name must correspond to the icon name of [Font Awesome 4](https://fontawesome.com/v4.7.0/icons/), e.g. github means `<span class="fa fa-github"></span>`.
 
 [Fancybox]: https://github.com/fancyapps/fancyBox
