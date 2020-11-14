@@ -1,0 +1,19 @@
+name: Publish
+
+on: [push, pull_request]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v2-beta
+        with:
+          node-version: '14.x'
+      - name: Publish
+        if: github.ref == 'refs/heads/master'  
+        run: npm publish
+      - name: Publish Dry-Run
+        if: github.ref != 'refs/heads/master'  
+        run: npm publish --dry-run
