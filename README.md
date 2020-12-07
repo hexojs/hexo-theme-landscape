@@ -76,7 +76,7 @@ twitter:
 - **widgets** - Widgets displaying in sidebar
 - **google_analytics** - Google Analytics ID
 - **favicon** - Favicon path
-- **twitter** - Twiiter ID
+- **twitter** - Twitter ID
 
 ## Features
 
