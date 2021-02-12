@@ -1,4 +1,4 @@
-var rUrl = /([/|.|\w|\s|-])*\.(?:jpg|gif|png)/;
+var rUrl = /([^\[]+(\.(jpg|png|gif|bmp)))/;
 
 /**
 * Fancybox tag
@@ -18,7 +18,6 @@ hexo.extend.tag.register('fancybox', function(args){
   var title = args.join(' ');
 
   return `<a data-fancybox="gallery" href="${original}" data-caption="${title}">
-    <img src="${thumbnail || original}" alt="${title}">
-    </a>
+    <img src="${thumbnail || original}" alt="${title}"></a>
     ${title ? `<span class="caption">${title}</span>` : ''}`;
 });
