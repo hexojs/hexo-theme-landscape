@@ -46,6 +46,7 @@ recent_posts_limits: 5
 
 # Miscellaneous
 google_analytics:
+google_adsense:
 gauges_analytics:
 favicon: /favicon.png
 twitter:
