@@ -88,3 +88,7 @@ if sidebar is left
 
 if sidebar
   @import "_partial/sidebar"
+
+// pin the footer to the bottom of the screen even if content is small
+body > div#container > div#wrap > div.outer
+	min-height: s('calc(100vh - %s - %s)',banner-height, footer-height)
