@@ -8,8 +8,16 @@ A brand new default theme for [Hexo].
 
 ### Install
 
+Local git install:
+
 ``` bash
 $ git clone --depth 1 https://github.com/hexojs/hexo-theme-landscape themes/landscape
+```
+
+npm install:
+
+```
+npm i hexo-theme-landscape
 ```
 
 **Landscape requires Hexo 2.4 and above.** If you would like to enable the RSS, the [hexo-generator-feed](https://github.com/hexojs/hexo-generator-feed) plugin is also required.
@@ -32,6 +40,8 @@ git pull
 ```
 
 ## Configuration
+
+It is recommended not to modify `theme/landscape/_config.yml` but to use the `theme_config` section of `_config.yml` or to create `_config.landscape.yml` (see [Alternate Theme Config](https://hexo.io/docs/configuration#Alternate-Theme-Config)).
 
 ``` yml
 # Header
