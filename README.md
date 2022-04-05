@@ -17,7 +17,7 @@ $ git clone --depth 1 https://github.com/hexojs/hexo-theme-landscape themes/land
 npm install:
 
 ```
-npm i -P hexo-theme-landscape
+npm i hexo-theme-landscape
 ```
 
 **Landscape requires Hexo 2.4 and above.** If you would like to enable the RSS, the [hexo-generator-feed](https://github.com/hexojs/hexo-generator-feed) plugin is also required.
