@@ -114,4 +114,5 @@ Landscape provides 5 built-in widgets:
 
 All of them are enabled by default. You can edit them in `widget` setting.
 
+[Hexo]: https://hexo.io/
 [Fancybox]: https://github.com/fancyapps/fancyBox
