@@ -67,7 +67,7 @@ widgets:
 - category
 - tag
 - tagcloud
-- archives
+- archive
 - recent_posts
 
 # Miscellaneous
