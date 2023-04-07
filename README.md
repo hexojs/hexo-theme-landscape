@@ -74,6 +74,14 @@ widgets:
 google_analytics:
 favicon: /favicon.png
 twitter:
+
+# Header links
+# Each name must correspond to the icon name of Fork Awesome
+# https://forkaweso.me/Fork-Awesome/icons/
+#links:
+#  github: https://github.com/your_github_account
+#  twitter: https://twitter.com/your_twitter_account
+#  telegram: https://t.me/your_telegram_account
 ```
 
 - **menu** - Navigation menu
@@ -87,6 +95,7 @@ twitter:
 - **google_analytics** - Google Analytics ID
 - **favicon** - Favicon path
 - **twitter** - Twitter ID
+- **links** - Header links with icon, specified links will appear at the top right corner of the page
 
 ## Features
 
@@ -113,6 +122,17 @@ Landscape provides 5 built-in widgets:
 - recent_posts
 
 All of them are enabled by default. You can edit them in `widget` setting.
+
+### Header links
+
+You can add links to the header area with icons.
+
+```
+social:
+  github: https://github.com/your_github_account
+  twitter: https://twitter.com/your_twitter_account
+  telegram: https://t.me/your_telegram_account
+```
 
 [Hexo]: https://hexo.io/
 [Fancybox]: https://github.com/fancyapps/fancyBox
