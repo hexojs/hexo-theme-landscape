@@ -8,8 +8,16 @@ A brand new default theme for [Hexo].
 
 ### Install
 
+Local git install:
+
 ``` bash
 $ git clone --depth 1 https://github.com/hexojs/hexo-theme-landscape themes/landscape
+```
+
+npm install:
+
+```
+npm i hexo-theme-landscape
 ```
 
 **Landscape requires Hexo 2.4 and above.** If you would like to enable the RSS, the [hexo-generator-feed](https://github.com/hexojs/hexo-generator-feed) plugin is also required.
@@ -33,6 +41,8 @@ git pull
 
 ## Configuration
 
+It is recommended not to modify `theme/landscape/_config.yml` but to use the `theme_config` section of `_config.yml` or to create `_config.landscape.yml` (see [Alternate Theme Config](https://hexo.io/docs/configuration#Alternate-Theme-Config)).
+
 ``` yml
 # Header
 menu:
@@ -46,6 +56,10 @@ subtitle: This a subtitle
 excerpt_link: Read More
 fancybox: true
 recent_posts_limits: 5
+# Footer
+copyright: |-
+  <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a></br>
+  All website licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></br>
 
 # Sidebar
 sidebar: right
@@ -53,7 +67,7 @@ widgets:
 - category
 - tag
 - tagcloud
-- archives
+- archive
 - recent_posts
 
 # Miscellaneous
@@ -120,4 +134,5 @@ social:
   telegram: https://t.me/your_telegram_account
 ```
 
+[Hexo]: https://hexo.io/
 [Fancybox]: https://github.com/fancyapps/fancyBox
