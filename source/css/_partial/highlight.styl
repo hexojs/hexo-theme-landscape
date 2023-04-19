@@ -60,10 +60,15 @@ $line-numbers
       margin-bottom: 1em
       a
         float: right
-    .gutter pre
-      @extend $line-numbers
-      text-align: right
-      padding-right: 20px
+    .gutter
+      -moz-user-select: none;
+      -ms-user-select: none;
+      -webkit-user-select: none;
+      user-select: none;
+      pre
+        @extend $line-numbers
+        text-align: right
+        padding-right: 20px
     .line
       height: font-size * line-height
     .line.marked
