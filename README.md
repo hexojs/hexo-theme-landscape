@@ -1,5 +1,7 @@
 # Landscape
 
+[![NPM version](https://badge.fury.io/js/hexo-theme-landscape.svg)](https://www.npmjs.com/package/hexo-theme-landscape)
+
 A brand new default theme for [Hexo].
 
 - [Preview](https://hexojs.github.io/hexo-theme-landscape/)
