@@ -16,7 +16,7 @@ If you're using Hexo 5.0 or later, the simplest way to install is through npm:
 npm i hexo-theme-landscape
 ```
 
-Local git install:
+Install via git:
 
 ```bash
 git clone --depth 1 https://github.com/hexojs/hexo-theme-landscape themes/landscape
