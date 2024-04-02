@@ -43,6 +43,8 @@ jobs:
           node-version: "20"
       - name: Install Dependencies
         run: npm install
+      - name: Set url
+        run: npx hexo config url https://hexojs.github.io/hexo-theme-landscape/
       - name: Checkout latest theme
         uses: actions/checkout@v4
         with:
