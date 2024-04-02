@@ -1,31 +1,33 @@
 # Header
+# Navigation menu
 menu:
   Home: /
   Archives: /archives
+# RSS link
 rss: /atom.xml
+# Path of title banner image of page top
 banner: "images/banner.jpg"
+# Subtitle of page top
+subtitle:
 
 # Content
+# "Read More" link at the bottom of excerpted articles. `false` to hide the link.
 excerpt_link: Read More
+# Enable fancybox
 fancybox: true
 
-# # Footer
-# copyright: |-
-#   <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a></br>
-#   All website licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a></br>
-
 # Footer
-copyright:
-# Need help choosing? Please see...
-# https://creativecommons.org/choose/
-# https://choosealicense.com/
-# You can use html like below...
+# Display copyright notice in footer. Please see https://creativecommons.org/choose/ and https://choosealicense.com/
+# You can use html like below.
 # copyright: |-
 #   <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a></br>
 #   All website licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a></br>
+copyright:
 
 # Sidebar
+# Sidebar style. You can choose `left`, `right`, `bottom` or `false`.
 sidebar: right
+# Widgets displaying in sidebar
 widgets:
 - category
 - tag
@@ -42,15 +44,28 @@ index_widgets:
 # Widget behavior
 archive_type: 'monthly'
 show_count: false
+# How many posts display in Home page.
 recent_posts_limits: 5
 
 # Miscellaneous
+# Google Analytics ID
 google_analytics:
 gauges_analytics:
+# Favicon path
 favicon: /favicon.png
+# Twitter ID
 twitter:
 fb_admins:
 fb_app_id:
+
+# Header links
+# Header links with icon, specified links will appear at the top right corner of the page
+# Each name must correspond to the icon name of Fork Awesome
+# https://forkaweso.me/Fork-Awesome/icons/
+links:
+#  github: https://github.com/your_github_account
+#  twitter: https://twitter.com/your_twitter_account
+#  telegram: https://t.me/your_telegram_account
 
 # valine comment system. https://valine.js.org
 valine:
