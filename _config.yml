@@ -9,6 +9,13 @@ rss: /atom.xml
 banner: "images/banner.jpg"
 # Subtitle of page top
 subtitle:
+# Header links with icon, specified links will appear at the top right corner of the page
+# Each name must correspond to the icon name of Fork Awesome
+# https://forkaweso.me/Fork-Awesome/icons/
+links:
+#  github: https://github.com/your_github_account
+#  twitter: https://twitter.com/your_twitter_account
+#  telegram: https://t.me/your_telegram_account
 
 # Content
 # "Read More" link at the bottom of excerpted articles. `false` to hide the link.
@@ -57,15 +64,6 @@ favicon: /favicon.png
 twitter:
 fb_admins:
 fb_app_id:
-
-# Header links
-# Header links with icon, specified links will appear at the top right corner of the page
-# Each name must correspond to the icon name of Fork Awesome
-# https://forkaweso.me/Fork-Awesome/icons/
-links:
-#  github: https://github.com/your_github_account
-#  twitter: https://twitter.com/your_twitter_account
-#  telegram: https://t.me/your_telegram_account
 
 # valine comment system. https://valine.js.org
 valine:
