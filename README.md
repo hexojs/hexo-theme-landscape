@@ -42,7 +42,7 @@ Install the latest version through npm:
 npm install hexo-theme-landscape@latest
 ```
 
-Or update to the latest master branch:
+Or update to the latest master branch via git:
 
 ```bash
 cd themes/landscape
