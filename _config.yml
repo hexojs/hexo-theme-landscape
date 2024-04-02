@@ -1,4 +1,6 @@
+# ===============
 # Header
+# ===============
 # Navigation menu
 menu:
   Home: /
@@ -17,13 +19,17 @@ links:
 #  twitter: https://twitter.com/your_twitter_account
 #  telegram: https://t.me/your_telegram_account
 
+# ===============
 # Content
+# ===============
 # "Read More" link at the bottom of excerpted articles. `false` to hide the link.
 excerpt_link: Read More
 # Enable fancybox
 fancybox: true
 
+# ===============
 # Footer
+# ===============
 # Display copyright notice in footer. Please see https://creativecommons.org/choose/ and https://choosealicense.com/
 # You can use html like below.
 # copyright: |-
@@ -31,7 +37,9 @@ fancybox: true
 #   All website licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a></br>
 copyright:
 
+# ===============
 # Sidebar
+# ===============
 # Sidebar style. You can choose `left`, `right`, `bottom` or `false`.
 sidebar: right
 # Widgets displaying in sidebar
@@ -42,19 +50,17 @@ widgets:
 - archive
 - recent_posts
 
-# display widgets at the bottom of index pages (pagination == 2)
-index_widgets:
-# - category
-# - tagcloud
-# - archive
-
+# ===============
 # Widget behavior
+# ===============
 archive_type: 'monthly'
 show_count: false
 # How many posts display in Home page.
 recent_posts_limits: 5
 
+# ===============
 # Miscellaneous
+# ===============
 # Google Analytics ID
 google_analytics:
 gauges_analytics:
@@ -65,6 +71,11 @@ twitter:
 fb_admins:
 fb_app_id:
 
+# ===============
+# Comment system
+# ===============
+# Disqus comment system.
+disqus_shortname:
 # valine comment system. https://valine.js.org
 valine:
   enable: false # if you want use valine,please set this value is true
