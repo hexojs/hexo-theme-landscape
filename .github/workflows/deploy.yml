@@ -33,7 +33,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          repository: hexojs/hexo-starter
+          repository: hexojs/hexo-theme-unit-test
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v3
@@ -43,18 +43,10 @@ jobs:
           node-version: "20"
       - name: Install Dependencies
         run: npm install
-      - name: Install hexo-tag-embed
-        run: npm install hexo-tag-embed
-      - name: Remove original theme
-        run: npm uninstall hexo-theme-landscape
       - name: Checkout latest theme
         uses: actions/checkout@v4
         with:
           path: themes/landscape
-      - uses: actions/checkout@v4
-        with:
-          repository: SukkaLab/hexo-many-posts
-          path: source/_posts/hexo-many-posts
       - name: Build with Hexo
         run: npx hexo g
       - name: Upload artifact
