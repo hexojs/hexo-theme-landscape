@@ -10,25 +10,25 @@ A brand new default theme for [Hexo].
 
 ### Install
 
-Local git install:
-
-``` bash
-$ git clone --depth 1 https://github.com/hexojs/hexo-theme-landscape themes/landscape
-```
-
-npm install:
+If you're using Hexo 5.0 or later, the simplest way to install is through npm:
 
 ```
 npm i hexo-theme-landscape
 ```
 
-**Landscape requires Hexo 2.4 and above.** If you would like to enable the RSS, the [hexo-generator-feed](https://github.com/hexojs/hexo-generator-feed) plugin is also required.
+Install via git:
+
+```bash
+git clone --depth 1 https://github.com/hexojs/hexo-theme-landscape themes/landscape
+```
+
+If you would like to enable the RSS, the [hexo-generator-feed](https://github.com/hexojs/hexo-generator-feed) plugin is also required.
 
 ### Enable
 
 Modify `theme` setting in `_config.yml` to `landscape`.
 
-``` diff
+```diff
 _config.yml
 - theme: some-theme
 + theme: landscape
@@ -36,72 +36,30 @@ _config.yml
 
 ### Update
 
-``` bash
+Install the latest version through npm:
+
+```sh
+npm install hexo-theme-landscape@latest
+```
+
+Or update to the latest master branch via git:
+
+```bash
 cd themes/landscape
 git pull
 ```
 
 ## Configuration
 
-It is recommended not to modify `theme/landscape/_config.yml` but to use the `theme_config` section of `_config.yml` or to create `_config.landscape.yml` (see [Alternate Theme Config](https://hexo.io/docs/configuration#Alternate-Theme-Config)).
+The configuration file for the theme is `_config.yml` in the repository. As the default theme for Hexo, hexo-theme-landscape is installed via npm during the `hexo init` site creation process, so it is generally located in the `node_modules/hexo-theme-landscape` directory. If you install it via `git clone` or other methods, it might be located in the `themes/landscape` directory.
 
-``` yml
-# Header
-menu:
-  Home: /
-  Archives: /archives
-rss: /atom.xml
-banner: images/banner.jpg
-subtitle: This a subtitle
+It is important to note that to prevent your modifications to the theme configuration file from being lost or overwritten during theme upgrades, **we do not recommend directly modifying this default configuration file**. You can copy the theme's `_config.yml` to your blog's root directory as `_config.landscape.yml` and configure it according to the documentation of configuration options therein (see [Alternate Theme Config](https://hexo.io/docs/configuration#Alternate-Theme-Config)).
 
-# Content
-excerpt_link: Read More
-fancybox: true
-recent_posts_limits: 5
-# Footer
-copyright: |-
-  <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a></br>
-  All website licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></br>
-
-# Sidebar
-sidebar: right
-widgets:
-- category
-- tag
-- tagcloud
-- archive
-- recent_posts
-
-# Miscellaneous
-google_analytics:
-favicon: /favicon.png
-twitter:
-
-# Header links
-# Each name must correspond to the icon name of Fork Awesome
-# https://forkaweso.me/Fork-Awesome/icons/
-#links:
-#  github: https://github.com/your_github_account
-#  twitter: https://twitter.com/your_twitter_account
-#  telegram: https://t.me/your_telegram_account
-```
-
-- **menu** - Navigation menu
-- **rss** - RSS link
-- **banner** - Path of title banner image of page top
-- **excerpt_link** - "Read More" link at the bottom of excerpted articles. `false` to hide the link.
-- **fancybox** - Enable [Fancybox]
-- **recent_posts_limits** - How many posts display in Home page.
-- **sidebar** - Sidebar style. You can choose `left`, `right`, `bottom` or `false`.
-- **widgets** - Widgets displaying in sidebar
-- **google_analytics** - Google Analytics ID
-- **favicon** - Favicon path
-- **twitter** - Twitter ID
-- **links** - Header links with icon, specified links will appear at the top right corner of the page
+The following will also detail the usage of some options.
 
 ## Features
 
-### Fancybox
+### FancyBox
 
 Landscape uses [Fancybox] to showcase your photos. You can use Markdown syntax or fancybox tag plugin to add your photos.
 
@@ -129,8 +87,8 @@ All of them are enabled by default. You can edit them in `widget` setting.
 
 You can add links to the header area with icons.
 
-```
-social:
+```yml
+links:
   github: https://github.com/your_github_account
   twitter: https://twitter.com/your_twitter_account
   telegram: https://t.me/your_telegram_account
