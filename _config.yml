@@ -63,6 +63,7 @@ recent_posts_limits: 5
 # ===============
 # Google Analytics ID
 google_analytics:
+google_adsense:
 gauges_analytics:
 # Favicon path
 favicon: /favicon.png
